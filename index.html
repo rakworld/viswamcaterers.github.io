@@ -1,13 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Index Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viswam Catering | Premium Andhra Catering</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data/fevicon.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <!-- <link href="/data/main.css" rel="stylesheet"> -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#1A1A1A',
+            gold: '#C5A059',
+            offwhite: '#F9F9F9',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    <h1>Welcome to Viswam Catering Services!</h1>
-    <p>This is the content of the sample index file.</p>
-    <a href="https://www.w3schools.com">Visit W3Schools for more examples</a>
+
+<body class="bg-offwhite text-charcoal font-sans">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 w-full bg-charcoal z-50 shadow-lg">
+  <div class="max-w-10xl mx-auto flex items-center justify-between px-9 py-6">
+    <img src="data/viswamlogo1.png" alt="Viswam Catering" class="h-16">
+
+    <nav class="hidden md:flex space-x-8 text-offwhite">
+      <a href="#about" class="hover:text-gold">About Us</a>
+      <a href="#services" class="hover:text-gold">Services</a>
+      <a href="#menu" class="hover:text-gold">Menu</a>
+      <a href="#testimonials" class="hover:text-gold">Testimonials</a>
+      <a href="#contact" class="hover:text-gold">Contact</a>
+    </nav>
+
+    <a href="https://wa.me/918886551365" target="_blank"
+       class="hidden md:inline-block bg-gold text-charcoal px-5 py-2 rounded-full font-semibold hover:opacity-90">
+      Book Now
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuBtn" class="md:hidden text-offwhite text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Overlay Menu -->
+  <div id="mobileMenu" class="hidden fixed inset-0 bg-charcoal text-offwhite flex flex-col items-center justify-center space-y-6 text-xl">
+    <a href="#about" onclick="toggleMenu()">About Us</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#menu" onclick="toggleMenu()">Menu</a>
+    <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="https://wa.me/918886551365" target="_blank"
+       class="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold">
+      Book Now
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="h-screen flex items-center justify-center text-center bg-cover bg-center"
+ style="background-image:url('data/background.jpg');">
+  <div class="bg-charcoal/70 p-10 rounded-xl max-w-2xl">
+    <h1 class="font-serif text-4xl md:text-5xl text-offwhite mb-6">
+      Premium Coastal Andhra Catering Experiences
+    </h1>
+    <p class="text-offwhite mb-8">
+      Authentic South Indian flavors crafted for elegant celebrations.
+    </p>
+    <a href="https://wa.me/918886551365" target="_blank"
+       class="bg-gold text-charcoal px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90">
+      Book an Event
+    </a>
+  </div>
+</section>
+<!-- ================= ABOUT US ================= -->
+<section id="about" class="py-20 max-w-7xl mx-auto px-6">
+  <h2 class="font-serif text-3xl text-center mb-12">About Us</h2>
+
+  <div class="grid md:grid-cols-1 gap-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+      <!--<i class="fas fa-building text-gold text-3xl mb-4"></i> 
+      <h3 class="font-serif text-xl mb-3">Viswam Catering Services (Taste That Talks)</h3> -->
+      <p><b>Viswam Catering Services  (Taste That Talks) </b> is a professional and premium catering services company established in 2008. For nearly 17 years, we have been providing comprehensive services to meet all the culinary needs of our customers in Nellore. Our goal is to deliver a unique dining experience with every delicious meal we serve. Our motto, "Delivering smiles with every celebration," reflects our commitment to providing the utmost satisfaction to our clients at affordable prices. We are dedicated to using uncompromisingly high-quality ingredients, generous portions, exceptional hygiene standards, freshly prepared spices, transportation, meticulous presentation, and paying attention to every detail of dishes.</p>
+    </div>
+
+   </section>
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-20 max-w-7xl mx-auto px-6">
+  <h2 class="font-serif text-3xl text-center mb-12">Our Services</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+      <i class="fas fa-building text-gold text-3xl mb-4"></i>
+      <h3 class="font-serif text-xl mb-3">Corporate Events</h3>
+      <p>Professional catering solutions for meetings, launches, and conferences.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+      <i class="fas fa-ring text-gold text-3xl mb-4"></i>
+      <h3 class="font-serif text-xl mb-3">Private Weddings</h3>
+      <p>Traditional Andhra wedding feasts with luxury presentation.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+      <i class="fas fa-people-group text-gold text-3xl mb-4"></i>
+      <h3 class="font-serif text-xl mb-3">Social Gatherings</h3>
+      <p>Birthdays, housewarmings, and festive celebrations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu" class="bg-charcoal py-20 text-offwhite">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="font-serif text-3xl mb-10">Menu Preview</h2>
+
+    <div class="flex justify-center space-x-4 mb-8">
+      <button onclick="showMenu('app')" class="menuBtn bg-gold text-charcoal px-4 py-2 rounded">Appetizers</button>
+      <button onclick="showMenu('main')" class="menuBtn px-4 py-2 border border-gold rounded">Main Course</button>
+      <button onclick="showMenu('des')" class="menuBtn px-4 py-2 border border-gold rounded">Desserts</button>
+    </div>
+
+    <div id="menuContent" class="grid md:grid-cols-6 gap-4"></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" class="py-20 max-w-7xl mx-auto px-6">
+  <h2 class="font-serif text-3xl text-center mb-12">What Clients Say</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded-xl shadow">
+      <p>"Outstanding taste and presentation!"</p>
+      <div class="text-gold mt-2">★★★★★</div>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow">
+      <p>"Best Andhra catering in Nellore."</p>
+      <div class="text-gold mt-2">★★★★★</div>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow">
+      <p>"Highly professional and authentic."</p>
+      <div class="text-gold mt-2">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-charcoal py-20 text-offwhite">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="font-serif text-3xl text-center mb-8">Book Your Event</h2>
+
+    <form class="grid gap-6">
+      <input type="date" class="p-3 rounded text-charcoal" required>
+      <input type="number" placeholder="Guest Count" class="p-3 rounded text-charcoal" required>
+      <select class="p-3 rounded text-charcoal">
+        <option>Corporate Event</option>
+        <option>Wedding</option>
+        <option>Family Event</option>
+        <option>Social Gathering</option>
+        <option>Devotional Event </option>
+      </select>
+      <button class="bg-gold text-charcoal py-3 rounded font-semibold">
+        Submit Enquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-black text-offwhite py-10">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div>
+      <img src="data/viswamlogo1.png" width="200" height="200" >
+      </div>
+
+    <div>
+      <h4 class="font-serif mb-3">Contact</h4>
+      <p>📞 +91 88865 51365</p>
+      <p>📞 +91 99124 81611</p>
+      <p>📧 contact@viswamcaterers.in</p>
+      <br>
+      <p>#3/6/263, Ground Floor, Weavers Colony,<br>
+        Lakshmi Puram, Stonehouse Pet,<br>
+        Nellore, AP 524002</p>
+    </div>
+
+    <div>
+      <h4 class="font-serif mb-3">Follow Us</h4>
+      <div class="flex space-x-4 text-xl">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const menuData = {
+    app: [
+      "Punugulu",
+      "Mirchi Bajji",
+      "Gobi 65 ",
+      "Aloo 65",
+      "Medu Vada",
+      "Alasanda Garelu",
+      "Masala Vada",
+      "Onion Pakoda",
+      "Bhindi Fry",
+      "Samosa"
+    ],
+    main: [
+      "Gongura Chicken",
+      "Pulihora",
+      "Andhra Veg Meals",
+      "Tiffins",
+      "Breakfast"
+    ],
+    des: [
+      "Pootharekulu",
+      "Bobbatlu",
+      "Payasam"
+    ]
+  };
+
+  function showMenu(type) {
+    const container = document.getElementById('menuContent');
+    container.innerHTML = '';
+    menuData[type].forEach(item => {
+      container.innerHTML += `
+        <div class="bg-white text-charcoal p-6 rounded-xl shadow">
+          <p>${item}</p>
+        </div>`;
+    });
+  }
+  showMenu('app');
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+  document.getElementById('menuBtn').onclick = toggleMenu;
+</script>
+
 </body>
 </html>
