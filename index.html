@@ -20,7 +20,7 @@
 
         /* Navigation & Logo */
         .navbar { background-color: rgba(26, 26, 26, 0.98); padding: 10px 0; }
-        .navbar-brand img { height: 110px; width: auto; }
+        .navbar-brand img { height: 60px; width: auto; }
         .nav-link { color: white !important; font-weight: 500; text-transform: uppercase; margin: 0 10px; font-size: 0.9rem; }
         .nav-link:hover { color: var(--gold) !important; }
 
@@ -52,9 +52,9 @@
 
         /* Marquee Gallery */
         .gallery-wrapper { position: relative; overflow: hidden; padding: 60px 0; background: #fff; }
-        .marquee-container { display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 15px; padding: 10px; scrollbar-width: none; }
+        .marquee-container { display: flex; overflow-x: hidden; white-space: nowrap; cursor: grab; scroll-behavior: smooth; gap: 15px; padding: 10px; scrollbar-width: none; }
         .marquee-container::-webkit-scrollbar { display: none; }
-        .gallery-item { min-width: 350px; height: 280px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
+		.gallery-item { min-width: 350px; height: 280px; flex: 0 0 auto; padding: 0 10px; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
         .gallery-btn {
             position: absolute; top: 50%; transform: translateY(-50%);
@@ -95,6 +95,8 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Catering Menu</a></li>
+					<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="#booking">Book Now</a></li>
 					 <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
@@ -104,21 +106,29 @@
 
     <section id="hero">
         <div class="container" data-aos="zoom-out">
+		<div class="p-4 p-md-5 rounded-4 mx-auto" 
+			 style="max-width: 800px; background-color: rgba(26, 26, 26, 0.85); border: 1px solid rgba(197, 160, 89, 0.3);">
             <h1 class="display-1 fw-bold mb-3">Taste That Talks</h1>
             <p class="lead fs-3 mb-5 serif">Delivering smiles with every celebration since 2008.</p>
 			<p> Premium Coastal Andhra Catering Experiences </p>
-            <a href="https://wa.me/918886551365" class="btn btn-lg px-5 py-3" style="background: var(--gold); color: white; border-radius: 0; font-weight: 600;">BOOK AN EVENT</a>
+            <a href="#booking" 
+				target="_blank" 
+				class="btn btn-lg rounded-pill px-5 py-3 fw-bold text-uppercase shadow-sm"
+				style="background-color: #C5A059; color: #1A1A1A; border: none; font-size: 1.1rem; letter-spacing: 1px;">
+				Book an Event
+			</a>
+		</div>	
         </div>
     </section>
 
-    <section id="about" class="py-5 bg-white">
+	<section id="about" class="py-5 bg-white">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="display-5 mb-4">Our Heritage</h2>
+                    <h2 class="display-6 mb-5">Our Heritage</h2>
                     <p class="lead">Viswam Catering Services is a premium catering company established in 2008.</p>
                     <p>For nearly 17 years, we have been providing comprehensive services to meet all the culinary needs of customers in Nellore. Our goal is to deliver a unique dining experience with every delicious meal we serve.</p>
-                    <p>Our motto, <strong>"Delivering smiles with every celebration"</strong> reflects our commitment to providing the utmost satisfaction at affordable prices. We use uncompromisingly high-quality ingredients, meticulous presentation, and paying attention to every detail. Authentic South Indian flavors crafted for elegant celebrations. </p>
+                    <p>Our motto, <strong>"Delivering smiles with every celebration"</strong> reflects our commitment to providing the utmost satisfaction at affordable prices. We use uncompromisingly high-quality ingredients, meticulous presentation, and paying attention to every detail. Special Live food counters availabe with Authentic South Indian flavors crafted for all your elegant celebrations. </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <img src="data/photo-1551218808-94e220e084d2.jpeg?w=800" class="img-fluid" alt="Authentic Food">
@@ -126,6 +136,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="services" class="py-5 bg-light">
         <div class="container py-5">
@@ -140,7 +151,7 @@
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
-                        <i class="fa-solid fa-rings-wedding service-icon"></i>
+                        <i class="fa-solid fa-handshake service-icon"></i>
                         <h3>Private Weddings</h3>
                         <p>Grand South Indian wedding feasts tailored to your family traditions.</p>
                     </div>
@@ -158,8 +169,8 @@
 
     <section id="menu" class="py-5 bg-white">
         <div class="container py-5">
-            <h2 class="text-center mb-5">Catering Menu Preview </h2>
-			<p class="text-center">Authentic Andhra Delicacies</p> 
+            <h2 class="text-center mb-5 display-6">Catering Menu</h2>
+			<h5 class="text-center">Authentic Andhra Delicacies</h5> 
             <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab">
                 <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-app">Appetizers</button></li>
                 <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-main">Main Course</button></li>
@@ -174,26 +185,77 @@
             </div>
         </div>
     </section>
+	<section id="gallery" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 display-6">Gallery</h2>
+			<div class="gallery-wrapper">
+				<button class="gallery-btn btn-prev" onclick="moveGallery(-2)"><i class="fa fa-chevron-left"></i></button>
+				<div class="marquee-container" id="galBox">
+					<div class="gallery-item"><img src="data/photo-1601050633647-81a35d3773f1.jpeg?w=600"></div>
+					<div class="gallery-item"><img src="data/photo-1630409346824-4f0e7b080087.jpeg?w=600"></div>
+					<div class="gallery-item"><img src="data/photo-1589302168068-964664d93dc0.jpeg?w=600"></div>
+					<div class="gallery-item"><img src="data/photo-1626074353765-517a681e40be.jpeg?w=600"></div>
+					<div class="gallery-item"><img src="data/photo-1547928576-a4a33237eceb.jpeg?w=600"></div>
+					<div class="gallery-item"><img src="data/fishcurry.jpeg?w=600"></div>
+				</div>
+				<button class="gallery-btn btn-next" onclick="moveGallery(1)"><i class="fa fa-chevron-right"></i></button>
+			</div>
+    </section>	
+	<section id="testimonials" class="py-5 bg-light">
+	<div class="container py-5">
+	  <h2 class="text-center mb-5 display-6">What Clients Say</h2>
+		<div class="row g-4">
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"Ordered for our housewarming function, The food portions were generous and the spices felt freshly ground." <br> --Duvvuru Krishna Reddy , Buchi</p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
 
-    <div class="gallery-wrapper">
-        <button class="gallery-btn btn-prev" onclick="moveGallery(-1)"><i class="fa fa-chevron-left"></i></button>
-        <div class="marquee-container" id="galBox">
-            <div class="gallery-item"><img src="data/photo-1601050633647-81a35d3773f1.jpeg?w=600"></div>
-            <div class="gallery-item"><img src="data/photo-1630409346824-4f0e7b080087.jpeg?w=600"></div>
-            <div class="gallery-item"><img src="data/photo-1589302168068-964664d93dc0.jpeg?w=600"></div>
-            <div class="gallery-item"><img src="data/photo-1626074353765-517a681e40be.jpeg?w=600"></div>
-            <div class="gallery-item"><img src="data/photo-1547928576-a4a33237eceb.jpeg?w=600"></div>
-			<div class="gallery-item"><img src="data/fishcurry.jpeg?w=600"></div>
-        </div>
-        <button class="gallery-btn btn-next" onclick="moveGallery(1)"><i class="fa fa-chevron-right"></i></button>
-    </div>
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"We chose Viswam Catering for our daughter's wedding, The presentation was as beautiful as the food was delicious." <br> -- N Venkata Ramanaiah, Balaji Nagar</p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"Reliable, hygienic, consistently tasty and punctual for our office corporate lunch service" <br> -- Kota Ramesh, Vedayapalem</p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"Highly professional, Outstanding authentic taste! Best catering in district" <br> --P Suneel Kumar Yadav, Gudur </p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"They treated our small family gathering with the same premium care as a large wedding." <br> -- P. Vijay Kumar, Pogathota </p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4">
+		  <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+			<p class="mb-0">"Uncompromising quality at affordable prices. Every guest left satisfied and happy."<br> -- G Venkatesh, Kavali</p>
+			<div class="text-warning mt-2">★★★★★</div>
+		  </div>
+		</div>
+	  </div>
+	 </div>
+	</section>
 
     <section id="booking" class="py-5 bg-light">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="booking-form" data-aos="fade-up">
-                        <h2 class="text-center mb-5 serif">Book Your Celebration</h2>
+                        <h2 class="text-center mb-5 display-6">Book Your Celebration</h2>
                         <form id="bookingForm">
                             <div class="row g-3">
                                 <div class="col-md-6"><input type="text" class="form-control py-3" id="clientName" placeholder="Your Name" required></div>
@@ -217,26 +279,55 @@
             </div>
         </div>
     </section>
-    <footer>
-	<section id="contact">
-           <div class="container text-center">
-			<h2 class="text-white mb-3">Contact Us</h2>
-            <img src="data\viswamlogo1.png" class="footer-logo" alt="Viswam Logo">
-            <p class="mb-4">#3-6-263, Ground Floor, Weavers Colony, Lakshmi Puram, Stonehouse Pet, Nellore, 524002 India</p>
-			<p class="small">Phone: <span class="obs">1161842199 / 5631556888</span> | Email: <span class="obs">moc.liamg@sreretacmawsiv</span></p>
-            <div class="mb-5">
-                <h5 class="text-white mb-3">Follow Us</h5>
-                <a href="https://www.facebook.com/viswamcaterers" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/viswamcaterers" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/918886551365" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
-				<a href="https://maps.app.goo.gl/6fegUUgQPtLML4g47" target="_blank" class="social-link"><i class="fa fa-map-marker"></i></a>
-            </div>
-            <div class="pt-4 border-top border-secondary">
-                             <p class="small mb-0">© 2026 Viswam Caterers. Taste That Talks.</p>
-            </div>
-        </div>
-  	</section>
-	</footer>
+    <section id="contact">
+		<footer class="bg-dark text-white py-5">
+		   <div class="container">
+			<div class="row g-4 align-items-center">
+			  <div class="col-md-4 text-center text-md-start">
+				<img src="data\viswamlogo1.png" alt="Viswam Caterers" class="img-fluid footer-logo">
+			  </div>
+
+			  <div class="col-md-4">
+				<h3 class="serif mb-3 text-gold">Contact Us</h3>
+				<div class="mb-3">
+				  <p class="mb-1"><i class="fa fa-phone me-2"></i> <span class="obs">5631 556 888</span></p>
+				  <p class="mb-1"><i class="fa fa-phone me-2"></i> <span class="obs">1161 842 199</span></p>
+				  <p class="mb-1"><i class="fa fa-envelope me-2"></i> <span class="obs">moc.liamg@sreretacmawsiv</span></p>
+				</div>
+				<p class="small opacity-75">
+				  #3/6/263, Ground Floor, Weavers Colony,<br>
+				  Lakshmi Puram, Stonehouse Pet,<br>
+				  Nellore, AP 524002
+				</p>
+			  </div>
+
+			  <div class="col-md-4">
+				<h4 class="serif mb-3 text-gold">Follow Us</h4>
+				<div class="d-flex gap-3 fs-4">
+				  <a href="https://www.facebook.com/viswamcaterers" target="_blank" class="text-white text-decoration-none">
+					<i class="fab fa-facebook"></i>
+				  </a>
+				  <a href="https://www.instagram.com/viswamcaterers" target="_blank" class="text-white text-decoration-none">
+					<i class="fab fa-instagram"></i>
+				  </a>
+				  <a href="https://wa.me/918886551365" target="_blank" class="text-white text-decoration-none">
+					<i class="fab fa-whatsapp"></i>
+				  <a href="https://maps.app.goo.gl/6fegUUgQPtLML4g47" target="_blank" class="text-white text-decoration-none">
+					<i class="fa fa-map-marker"></i></a>
+
+				  </a>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="row mt-5 pt-4 border-top border-secondary">
+			  <div class="col text-center">
+				<p class="small mb-0 opacity-50">&copy; 2026 Viswam Caterers. Taste That Talks. All Rights Reserved.</p>
+			  </div>
+			</div>
+		  </div>
+		</footer>
+	</section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -244,7 +335,10 @@
 
         // Menu Data
         const menuItems = {
-            apps: ["Chitti Garelu", "Mirchi Bajji", "Punugulu", "Aratikaya Bajji", "Onion Pakoda", "Sweet Corn Vada", "Veg Manchurian", "Gobi 65", "Paneer Tikka"],
+            apps: ["👨‍🍳 Live Street Food Counters", "🌿 Chitti Garelu", "🌿 Mirchi Bajji", "🌿 Punugulu", "🌿 Aratikaya Bajji", "🌿 Onion Pakoda", "🌿 Sweet Corn Vada", "🌿 Veg Manchurian", "🌿 Gobi 65", " 🌿 Paneer Tikka" ,
+				  "🍗 Chicken Fry -Viswam Specials","🍗 Chicken 65","🍗 Chicken Pakodi","🍗 Chicken Manchurian","🍗 Chicken Majestic", 
+				  "🐐 Mutton Fry -Nellore Style", "🐐 Mutton Pepper Fry","🐐 Mutton Sukka -Dry Roast",
+				  "🐟 Apollo Fish", "🐟 Fish Fry - Traditional","🦐 Prawn Fry – Nellore Style" ,"🦀 Crab Fry - Seasonal Availability" ],
             mains: ["Nellore Chepala Pulusu", "Gongura Mutton", "Kodi Iguru", "Avakaya Annam", "Pulihora", "Bisi Bele Bath", "Bagara Rice", "Veg Biryani", "Gutthi Vankaya", "Tomato Pappu"],
             tiffin: ["Medhu Vada", "Live Dosa Counter", "Idli", "Ghee Pongali", "Poori", "Rava Upma", "Tomato Bath", "Chapathi", "Parota", "Millet Specials"],
             desserts: ["Pootharekulu", "Nellore Malai Khaja", "Kakinada Kaja", "Ariselu", "Sunnundalu", "Boondi Laddu", "Mysore Pak", "Gulab Jamun", "Rasgulla", "Rasmalai"]
@@ -260,10 +354,40 @@
         renderList('dessert-list', menuItems.desserts);
 
         // Gallery Move
-        const moveGallery = (dir) => {
-            document.getElementById('galBox').scrollBy({ left: dir * 350, behavior: 'smooth' });
-        };
+		const galBox = document.getElementById('galBox');
+		let isPaused = false;
+		const speedValue = 2; // High speed as requested
 
+		// 1. CLONE IMAGES FOR INFINITE LOOP
+		// This doubles the content so there's always an image following the last one
+		const originalContent = galBox.innerHTML;
+		galBox.innerHTML += originalContent; 
+
+		function autoScroll() {
+			if (!isPaused) {
+				galBox.scrollLeft += speedValue;
+				
+				// 2. SEAMLESS RESET
+				// If scroll reaches the midpoint (end of the first set), 
+				// snap back to 0 instantly. Because set 1 and set 2 
+				// are identical, the user won't see the jump.
+				if (galBox.scrollLeft >= galBox.scrollWidth / 2) {
+					galBox.scrollLeft = 0;
+				}
+			}
+		}
+
+		let scrollInterval = setInterval(autoScroll, 10);
+
+		// Manual buttons
+		function moveGallery(direction) {
+			const scrollAmount = 400;
+			galBox.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+		}
+
+		// Pause on hover
+		galBox.addEventListener('mouseenter', () => { isPaused = true; });
+		galBox.addEventListener('mouseleave', () => { isPaused = false; });
         // Form Submission
         document.getElementById('bookingForm').onsubmit = (e) => {
             e.preventDefault();
@@ -273,11 +397,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
