@@ -158,8 +158,8 @@
 
     <section id="menu" class="py-5 bg-white">
         <div class="container py-5">
-            <h2 class="text-center mb-5">Catering Menu Preview</h2>
-			<p>Authentic Andhra Delicacies</p>
+            <h2 class="text-center mb-5">Catering Menu Preview </h2>
+			<p class="text-center">Authentic Andhra Delicacies</p> 
             <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab">
                 <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-app">Appetizers</button></li>
                 <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-main">Main Course</button></li>
@@ -169,6 +169,7 @@
             <div class="tab-content border p-4 shadow-sm bg-light">
                 <div class="tab-pane fade show active" id="tab-app"><div class="row" id="app-list"></div></div>
                 <div class="tab-pane fade" id="tab-main"><div class="row" id="main-list"></div></div>
+				<div class="tab-pane fade" id="tab-tiffin"><div class="row" id="tiffin-list"></div></div>
                 <div class="tab-pane fade" id="tab-dessert"><div class="row" id="dessert-list"></div></div>
             </div>
         </div>
@@ -216,10 +217,10 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="py-5 bg-white">
-          <h2 class="text-center mb-5">Contact Us</h2>
     <footer>
-        <div class="container text-center">
+	<section id="contact" class="py-5 bg-white">
+          <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="container text-center">
             <img src="data\viswamlogo1.png" class="footer-logo" alt="Viswam Logo">
             <p class="mb-4">#3-6-263, Ground Floor, Weavers Colony, Lakshmi Puram, Stonehouse Pet, Nellore, 524002 India</p>
 			<p class="small">Phone: <span class="obs">1161842199 / 5631556888</span> | Email: <span class="obs">moc.liamg@sreretacmawsiv</span></p>
@@ -255,6 +256,7 @@
         };
         renderList('app-list', menuItems.apps);
         renderList('main-list', menuItems.mains);
+		renderList('tiffin-list', menuItems.tiffin);
         renderList('dessert-list', menuItems.desserts);
 
         // Gallery Move
@@ -271,6 +273,7 @@
     </script>
 </body>
 </html>
+
 
 
 
